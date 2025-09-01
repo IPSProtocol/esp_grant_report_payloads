@@ -6,7 +6,7 @@
   D1 --> Set[Dapp adds ERC20 transfers from user to Firesale contract]
   Set --> Sim[Wallet simulates tx]
   Sim --> B1{Preview/Summary benign}
-  B1 -->|Yes| Sign[User signs delegation and calldata]
+  B1 -->|Yes| Sign[User signs Authorization and calldata]
   Sign --> Pri[Tx sent via private RPC or mempool]
   Pri --> Mal[Dapp sends switch transaction]
   Mal --> Inc[Transaction order is chosen by Builder]
