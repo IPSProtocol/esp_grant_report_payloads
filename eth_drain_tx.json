@@ -1,0 +1,8 @@
+{
+    "chainId": 11155111,                 // Sepolia
+    "from": "0xVictim",
+    "to":   "Firesale",                  //Malicious DEX
+    "value": "0xaa87bee538000",          // Amount set by the dApp to drain user funds
+    "data":  "Swap(WETH -> FETH)"        // Swap function in Firesale     
+  }
+  
