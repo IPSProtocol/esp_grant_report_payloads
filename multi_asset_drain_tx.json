@@ -3,15 +3,15 @@
     "from": "0xVictim",
     "calls": [
   
- call1     { "to": "TokenA", "fn": "approve",  "args": { "spender": "Firesale",    "amount": "SWAP_AMOUNT" } }, // Swap logic: Normal Aprove amount of tokens to be swapped
+      { "to": "TokenA", "fn": "approve",  "args": { "spender": "Firesale",    "amount": "SWAP_AMOUNT" } }, // Swap logic: Normal Aprove amount of tokens to be swapped
    
- call2     { "to": "WETH", "fn": "transfer", "args": { "to": "Firesale",           "amount": "WETH_AMOUNT"  } },     // Malicious transfer of WETH to Firesale set by the dApp
+      { "to": "WETH", "fn": "transfer", "args": { "to": "Firesale",           "amount": "WETH_AMOUNT"  } },     // Malicious transfer of WETH to Firesale set by the dApp
   
- call3     { "to": "WBTC", "fn": "transfer", "args": { "to": "Firesale",           "amount": "WBTC_AMOUNT"  } },     // Malicious transfer of WBTC to Firesale set by the dApp
+      { "to": "WBTC", "fn": "transfer", "args": { "to": "Firesale",           "amount": "WBTC_AMOUNT"  } },     // Malicious transfer of WBTC to Firesale set by the dApp
   
- call4     { "to": "FETH",   "fn": "transfer", "args": { "to": "Firesale",         "amount": "FETH_AMOUNT"  } },   // Malicious transfer of FETH to Firesale set by the dApp
+      { "to": "FETH",   "fn": "transfer", "args": { "to": "Firesale",         "amount": "FETH_AMOUNT"  } },   // Malicious transfer of FETH to Firesale set by the dApp
   
- call5     { "to": "Firesale", "fn": "swap", "args": {  // Swap logic: Normal Swap function to be called
+      { "to": "Firesale", "fn": "swap", "args": {  // Swap logic: Normal Swap function to be called
         "path": ["FETH","WETH"], 
         "tokens": ["WETH","WBTC","FETH"], 
         "amounts": ["WETH_AMOUNT","WBTC_AMOUNT","FETH_AMOUNT"]  } } // Swap function in Firesale that will swap and return tokens to user

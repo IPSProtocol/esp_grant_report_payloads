@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+contract Firesale {
 function swapWETHforFETH(
         uint256 amountIn,
         uint256 amountOut,
@@ -21,4 +24,5 @@ function swapWETHforFETH(
             msg.sender.call{value: ethReceived}("");
             
         }
+    }
     }
